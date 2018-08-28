@@ -43,6 +43,8 @@ public class ProgressBarActivity extends Activity {
 	}
 	
 	public void startFourUrlAsync(View v) {
+		// 每次点击开始就清除上一次的结果
+		tvResult.setText("");
        new DelayTask().execute();
 	}
 	
@@ -55,16 +57,16 @@ public class ProgressBarActivity extends Activity {
 
 		@Override
 		protected String doInBackground(Void... params) {
-			String res = loadUrlBody("http://google.com");
+			String res = loadUrlBody("http://baidu.com");
 			lines.add(res.split("\n")[0]);
 			publishProgress(25);
-			res = loadUrlBody("http://yahoo.com");
+			res = loadUrlBody("http://sina.com");
 			lines.add(res.split("\n")[0]);
 			publishProgress(50);
-			res = loadUrlBody("http://twitter.com");
+			res = loadUrlBody("http://bilibili.com");
 			lines.add(res.split("\n")[0]);
 			publishProgress(75);
-			res = loadUrlBody("http://facebook.com");
+			res = loadUrlBody("http://cnblogs.com");
 			lines.add(res.split("\n")[0]);
 			publishProgress(100);
 			return "complete";

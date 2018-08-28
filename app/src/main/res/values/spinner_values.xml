@@ -9,4 +9,13 @@
        <item>Indigo</item>
        <item>Violet</item>
     </string-array>
+
+    <string-array name="spinner_phone">
+        <item>Xiaomi</item>
+        <item>iPhone</item>
+        <item>SmartT</item>
+        <item>Vivo</item>
+        <item>Oppo</item>
+
+    </string-array>
 </resources>
